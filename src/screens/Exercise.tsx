@@ -52,7 +52,6 @@ export function Exercise() {
           </HStack>
         </HStack>
       </VStack>
-
       <ScrollView>
         <VStack p={8}>
           <Image
