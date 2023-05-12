@@ -1,9 +1,17 @@
 import { useState } from 'react';
-import { VStack, ScrollView, Center, Skeleton, Text } from 'native-base';
+import {
+  VStack,
+  ScrollView,
+  Center,
+  Skeleton,
+  Text,
+  Heading,
+} from 'native-base';
 import { ScreenHeader } from '@components/ScreenHeader';
 import { UserPhoto } from '@components/UserPhoto';
 import { TouchableOpacity } from 'react-native';
 import { Input } from '@components/Input';
+import { Button } from '@components/Button';
 
 const PHOTO_SIZE = 33;
 
@@ -44,6 +52,19 @@ export function Profile() {
           <Input placeholder="Nome" bg="gray.600" />
           <Input placeholder="E-mail" bg="gray.600" isDisabled />
         </Center>
+        <VStack px={10} mt={12} mb={9}>
+          <Heading color="gray.200" fontSize="md" mb={2}>
+            Alterar senha
+          </Heading>
+          <Input bg="gray.600" placeholder="Senha antiga" secureTextEntry />
+          <Input bg="gray.600" placeholder="Nova senha" secureTextEntry />
+          <Input
+            bg="gray.600"
+            placeholder="Confirme a nova senha"
+            secureTextEntry
+          />
+          <Button title="Atualizar" mt={4} />
+        </VStack>
       </ScrollView>
     </VStack>
   );
